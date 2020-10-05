@@ -29,11 +29,12 @@ function displayResult(responseJson){
 }
 //This function is to collect the username when users click submit
 function watchForm(){
-$('form').submit(event =>{
-    event.preventDefault();
-    const searchHandle=$(`input[type="text"]`).val();
-    getResult(searchHandle);
-    console.log(searchHandle);
+    $('#gitHubHandle').empty();
+    $('form').submit(event =>{
+        event.preventDefault();
+        const searchHandle=$(`input[type="text"]`).val();
+        getResult(searchHandle);
+        console.log(searchHandle);
 })
 };
 
